@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- add out metadata-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="widt=device-width, initial-scale=1">
+    <title>Working With Layouts - Flexbox</title>
+    <meta name="description"
+        content="This week we will start looking at creating a more polished layout of out HTML elements">
+    <meta name="robots" content="noindex, nofollow">
+    <!-- add our Css-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Add our Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="index.html"><img src="./img/logo.png" alt="our-logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+                <li><a href="#">Menu 4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- This div element will be handy when we style the page and will be used for the flexbox -->
+    <div>
+        <main>
+            <!-- First thing we are gonna add a masthead-->
+            <section>
+                <div>
+                    <h1>HTML Layouts - CSS Flexbox</h1>
+                </div>
+            </section>
+            <!-- For the first section of the content we will make it just one column-->
+            <section>
+                <h2>Section Heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa facere beatae, totam cumque corporis
+                    ut ab aliquam aspernatur praesentium optio sit quidem modi labore mollitia soluta nisi esse
+                    consectetur deserunt?
+                </p>
+            </section>
+            <!-- Our next row will be 4 colums-->
+            <section>
+                <!-- column 1-->
+                <div>
+                    <h3>Column 1</h3>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                        whenn looking at its layout</p>
+                    <a href="#">Click Me</a>
+                </div>
+                <!-- column 2-->
+                <div>
+                    <h3>Column 2</h3>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                        whenn looking at its layout</p>
+                    <a href="#">Click Me</a>
+                </div>
+                <!-- column 3-->
+                <div>
+                    <h3>Column 3</h3>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                        whenn looking at its layout</p>
+                    <a href="#">Click Me</a>
+                </div>
+                <!-- column 4-->
+                <div>
+                    <h3>Column 4</h3>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                        whenn looking at its layout</p>
+                    <a href="#">Click Me</a>
+                </div>
+            </section>
+            <!-- The third row will be 2 colums. One image one text-->
+            <section>
+                <div>
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam omnis sit cupiditate libero fuga
+                        quisquam veniam voluptatum officia! Dolorum obcaecati cum quaerat iusto sequi mollitia maiores
+                        tempora modi debitis harum?</p>
+                    <button>Button</button>
+                </div>
+                <div>
+                    <figure>
+                        <img src="./img/sample-image-1.jpg" alt="sample-image">
+                        <figcaption>Sample Caption</figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos aliquam, deleniti eius
+                        accusantium deserunt dolores nisi, aspernatur earum distinctio doloribus iusto sequi non maxime?
+                        Illum hic adipisci vero esse.</p>
+                    <button>Button</button>
+                </div>
+                <div>
+                    <figure>
+                        <img src="./img/sample-image-2.jpg" alt="sample-image">
+                        <figcaption>Sample Caption</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </main>
+        <!--This is a blog side so it will contain some articles that will be the parent eelemnt for our blog articles-->
+        <aside>
+            <section>
+                <article>
+                    <img src="./img/sample-image-3.jpg" alt="sample-image">
+                    <h4>Title 1</h4>
+                    <a href="#">Read More</a>
+                </article>
+                <article>
+                    <img src="./img/sample-image-3.jpg" alt="sample-image">
+                    <h4>Title 2</h4>
+                    <a href="#">Read More</a>
+                </article>
+            </section>
+            <section>
+                <article>
+                    <img src="./img/sample-image-3.jpg" alt="sample-image">
+                    <h4>Title 3</h4>
+                    <a href="#">Read More</a>
+                </article>
+                <article>
+                    <img src="./img/sample-image-3.jpg" alt="sample-image">
+                    <h4>Title 4</h4>
+                    <a href="#">Read More</a>
+                </article>
+            </section>
+            <section>
+                <article>
+                    <img src="./img/sample-image-3.jpg" alt="sample-image">
+                    <h4>Title 5</h4>
+                    <a href="#">Read More</a>
+                </article>
+                <article>
+                    <img src="./img/sample-image-3.jpg" alt="sample-image">
+                    <h4>Title 6</h4>
+                    <a href="#">Read More</a>
+                </article>
+            </section>
+        </aside>
+    </div>
+    <footer>
+        <div>
+            <a href="index.html"><img src="./img/logo.png" alt="our-logo"></a>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus sunt dignissimos neque animi modi
+                doloremque, facilis aut! Molestiae dolor laboriosam magnam temporibus, numquam dolores repudiandae
+                corrupti corporis possimus nostrum iusto?</p>
+        </div>
+        <div>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

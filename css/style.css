@@ -1,0 +1,206 @@
+body{margin: 0px;}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Josefin Sans', sans-serif;
+}
+p, a, li{
+    font-family: 'Merriweather', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+}
+header{
+    height: 105px;
+    display: flex; /* This applies the main flex property to an element */
+    align-items: center; /* This property will vertically align the flex items along the center of the flexbox */
+}
+/* now that the flexbox is setup, it is now time to move onto the flex items */
+header > div{
+    height: 90px;
+    /* Next we will use a property called flex-grow.This property will declare waht flex item gets the most space.
+    Since we want the nav to move to the right, we are gonna give the majority of the available space to this div */
+    flex-grow: 1;
+}
+header > div > a > img{
+    width: auto;
+    height: 100%;
+}
+header > nav > ul{
+    margin-bottom: 0px;
+    list-style: none;
+    /* What is really nice about flexbox is that you can make a flexbox inside of a flexbox. So let's make our list
+    a flexbox and our list items a flex item */
+    display: flex;
+}
+header > nav > ul > li{
+    padding: 0px 15px;
+}
+header > nav > ul > li > a{
+    color: #000;
+}
+/* So we used both the main element and the aside element. We want to displey the two element beside eachother that's why we are gonna need to make the aside and the main a flex item.
+So in orther to first make them a flex item we will need to make thier direct parent a lfexbox. The direct parent of these two elements is the 'div' we added with the comment that it will come handy later */
+body > div{
+    display: flex;
+}
+main > section:first-child{
+    /* Here we are gonna use a measurment that have not used yet and that is the 'vh', and it stands for Variable Height. The vh is similar to the percent unnit but the vh is relative to 1% of the height of the viewport,
+    where % is relative to the parent element */
+    /* The % unit is looking for its parent element and getting the percentage rate according to it
+    But the 'vh' is resizing itself according the viewport (like the phone screen size, or tablet or pc) */
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/masthead.jpg);
+    background-size: cover;
+    background-position: center;
+}
+main > section:first-child > div{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    /* Now it is gonna look a bit weird our text all the way at the top, so let's fix that.
+    To do this we would use 'align-content' but that is a flex property so it will not work outside of a direct flexbox.
+    So we will need to add display: flex to this dix so that we can align the h1 */
+    display: flex;
+    align-items: center;
+}
+main > section:first-child > div > h1{
+    width: 100%;
+    text-align: center;
+    font-size: 46px;
+    color: #fff;
+}
+main > section + section{
+    padding: 2%;
+}
+main > section + section > h2{
+    text-align: center;
+    font-size: 36px;
+}
+main > section + section > p{
+    text-align: center;
+}
+/* Moving on to the 4 column row */
+main > section + section + section{
+    display: flex;
+}
+main > section + section + section > div{
+    padding: 15px;
+    text-align: center;
+}
+main > section + section + section > div > a{
+    text-decoration: underline;
+    color: #000;
+}
+/* In the comments in the HTML I had mentioned that we will alternate the background color on the 4 colums.
+We can do this using the :nth-child() selector. For our example we will be using the even selector instead of a int. */
+main > section:nth-child(3) > div:nth-child(even){
+    background-color: #004b87;
+    color: #fff;
+}
+main > section:nth-child(3) > div:nth-child(even) > a{
+    color: #fff;
+    text-decoration: underline;
+}
+/* Our next 2 row in the main element are made up of 2 colums. 1 column is text and the other is figure. 
+You will see that even after we create our flexbox the layout still seems a bit off. This is where the flex property 'order' comes in.
+The 'order' property allows us to reposition an element by applying a number value to the flex item. Let's see how it works */
+main > section:nth-child(4){
+    display: flex;
+    align-items: center;
+}
+main > section:nth-child(4) > div:nth-child(1){
+    order: 2;
+}
+main section:nth-child(4) > div:nth-child(2){
+    order: 1;
+}
+main > section:nth-child(4) > div{
+    padding: 25px;
+    text-align: left;
+}
+main > section:nth-child(4) > div > figure{
+    width: 375px;
+    height: auto;
+}
+main > section:nth-child(4) > div > figure > img{
+    width: 100%;
+    height: auto;
+}
+main > section:nth-child(4) > div > figure > figcaption{
+    text-align: center;
+    font-style: italic;
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 500;
+}
+main > section:nth-child(4) > div > button{
+    background-color: #fff;
+    color: #004b87;
+    border: solid #004b87;
+    padding: 10px 25px;
+}
+main > section:nth-child(5){
+    display: flex;
+}
+main > section:nth-child(5) > div{
+    padding: 25px;
+    text-align: left;
+}
+main > section:nth-child(5) > div > figure{
+    width: 375px;
+    height: auto;
+}
+main > section:nth-child(5) > div > figure > img{
+    width: 100%;
+    height: auto;
+}
+main > section:nth-child(5) > div > figure > figcaption{
+    text-align: center;
+    font-style: italic;
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 500;
+}
+main > section:nth-child(5) > div > button{
+    background-color: #fff;
+    columns: #004b87;
+    border: solid #004b87;
+    pad: 10px 25px;
+}
+/* Now we will work with the 'aside' element */
+aside{
+    padding: 25px;
+    background-color: #f4f4f4;
+}
+aside > section{
+    display: flex;
+}
+aside > section > article{
+    width: 200px;
+    height: auto;
+    padding: 15px;
+    text-align: center;
+}
+aside > section > article > img{
+    width: 100%;
+    height: auto;
+}
+/* Now we will ove to footer */
+footer{
+    display: flex;
+    align-items: center;
+    background-color: #0e0e0e;
+    color: #fff;
+    padding: 25px 15px;
+}
+footer > div{
+    width: 33%;
+}
+footer > div:nth-child(1){
+    height: 125px;
+}
+footer > div:nth-child(1) > a > img{
+    height: 100%;
+    width: auto;
+}
+footer > div:nth-child(3){
+    display: flex;
+    justify-content: flex-end;
+}
